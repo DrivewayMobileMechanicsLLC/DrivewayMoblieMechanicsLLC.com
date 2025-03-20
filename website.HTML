@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trusted mobile auto repairs in Tri-Cities, TN with expert AI troubleshooting for all issues. Call (423) 302-8474 or book online.">
+    <meta name="keywords" content="mobile mechanics Tri-Cities TN, car repair Bristol, AI mechanic troubleshooting">
+    <title>Driveway Mobile Mechanics LLC - Tri-Cities, TN</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { line-height: 1.6; color: #333; background: #f4f4f4; }
+        header { background: #1e90ff; color: white; text-align: center; padding: 20px; }
+        h1 { font-size: 2em; }
+        .slogan { font-style: italic; margin-top: 5px; }
+        nav { background: #333; padding: 10px; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+        nav a:hover { color: #ff4500; }
+        .container { max-width: 1000px; margin: 20px auto; padding: 0 20px; }
+        .section { margin-bottom: 30px; }
+        h2 { color: #1e90ff; margin-bottom: 10px; }
+        ul { list-style: none; }
+        ul li { margin: 5px 0; }
+        .cta { background: #ff4500; color: white; padding: 10px 20px; display: inline-block; text-decoration: none; border-radius: 5px; }
+        .cta:hover { background: #e03e00; }
+        form { background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        label { display: block; margin: 10px 0 5px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #1e90ff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #1873cc; }
+        footer { background: #333; color: white; text-align: center; padding: 15px; }
+        footer a { color: #ff4500; text-decoration: none; }
+        .toggle { cursor: pointer; color: #ff4500; font-weight: bold; }
+        .toggle-content { display: none; padding: 10px; background: #fff; border-radius: 5px; margin-top: 5px; }
+        .testimonial { background: #fff; padding: 15px; margin: 10px 0; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+        .service-hours { font-size: 0.9em; color: #666; margin-top: 10px; }
+        .chatbot { position: fixed; bottom: 20px; right: 20px; width: 320px; background: #fff; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.2); display: none; }
+        .chat-header { background: #1e90ff; color: white; padding: 10px; border-radius: 10px 10px 0 0; cursor: pointer; }
+        .chat-body { padding: 10px; max-height: 250px; overflow-y: auto; }
+        .chat-message { margin: 5px 0; padding: 8px; border-radius: 5px; }
+        .user-message { background: #e0e0e0; text-align: right; }
+        .bot-message { background: #1e90ff; color: white; }
+        .chat-input { width: 100%; padding: 10px; border: none; border-top: 1px solid #ccc; border-radius: 0 0 10px 10px; }
+        .chat-toggle { position: fixed; bottom: 20px; right: 20px; background: #ff4500; color: white; padding: 10px 15px; border-radius: 50px; text-decoration: none; font-size: 0.9em; cursor: pointer; }
+        .chat-toggle:hover { background: #e03e00; }
+        @media (max-width: 600px) { 
+            h1 { font-size: 1.5em; } 
+            nav a { display: block; margin: 10px 0; } 
+            .chatbot { width: 90%; right: 5%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Driveway Mobile Mechanics LLC</h1>
+        <p class="slogan">Convenient. Reliable. Done Right—At Your Location.</p>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Booking</a>
+        <a href="#quote">Quote</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <div id="home" class="section">
+            <h2>Welcome to Tri-Cities, TN Mobile Repairs</h2>
+            <p>We bring professional, reliable, and affordable car repairs straight to your location—home, work, or roadside. Call us at <a href="tel:+14233028474">(423) 302-8474</a> or chat with our AI below for expert troubleshooting!</p>
+            <a href="#quote" class="cta">Get a Quote</a>
+        </div>
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>Driveway Mobile Mechanics LLC is your trusted mobile auto repair service in the Tri-Cities, TN area. Our experienced mechanics save you time and hassle with professional repairs wherever you are.</p>
+        </div>
+        <div id="services" class="section">
+            <h2>Services & Pricing</h2>
+            <ul>
+                <li><span class="toggle" onclick="document.getElementById('diag').style.display = document.getElementById('diag').style.display === 'block' ? 'none' : 'block'">Diagnostics: $60+</span>
+                    <div id="diag" class="toggle-content">Full vehicle scan to pinpoint issues fast.</div></li>
+                <li><span class="toggle" onclick="document.getElementById('brake').style.display = document.getElementById('brake').style.display === 'block' ? 'none' : 'block'">Brake Repairs: $100+</span>
+                    <div id="brake" class="toggle-content">Pads, rotors, and fluid checks included.</div></li>
+                <li><span class="toggle" onclick="document.getElementById('oil').style.display = document.getElementById('oil').style.display === 'block' ? 'none' : 'block'">Oil Changes: $40</span>
+                    <div id="oil" class="toggle-content">Quick oil and filter swap at your spot.</div></li>
+                <li><span class="toggle" onclick="document.getElementById('batt').style.display = document.getElementById('batt').style.display === 'block' ? 'none' : 'block'">Battery Replacements: $80+</span>
+                    <div id="batt" class="toggle-content">New battery installed, old one recycled.</div></li>
+                <li>More: Call for details</li>
+            </ul>
+            <p class="service-hours"><em>Mon–Fri, 9 AM–5 PM. After-hours services available for an additional fee.</em></p>
+        </div>
+        <div id="booking" class="section">
+            <h2>Book an Appointment</h2>
+            <form action="mailto:wes@drivewaymobilemechanics.com" method="post" enctype="text/plain">
+                <label for="b-name">Name</label>
+                <input type="text" id="b-name" name="name" required placeholder="John Doe">
+                <label for="b-phone">Phone</label>
+                <input type="tel" id="b-phone" name="phone" required placeholder="(423) 555-1234">
+                <label for="b-email">Email</label>
+                <input type="email" id="b-email" name="email" required placeholder="you@example.com">
+                <label for="b-service">Service Needed</label>
+                <select id="b-service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Diagnostics">Diagnostics ($60+)</option>
+                    <option value="Brake Repairs">Brake Repairs ($100+)</option>
+                    <option value="Oil Change">Oil Change ($40)</option>
+                    <option value="Battery Replacement">Battery Replacement ($80+)</option>
+                    <option value="Other">Other</option>
+                </select>
+                <label for="b-location">Location (Tri-Cities, TN area)</label>
+                <input type="text" id="b-location" name="location" required placeholder="e.g., Kingsport">
+                <label for="b-time">Preferred Time (Mon–Fri, 9 AM–5 PM)</label>
+                <input type="text" id="b-time" name="time" required placeholder="e.g., Wed 3 PM">
+                <label for="b-notes">Additional Notes</label>
+                <textarea id="b-notes" name="notes" rows="3" placeholder="Describe your issue..."></textarea>
+                <button type="submit">Submit Booking</button>
+            </form>
+            <p class="service-hours"><em>Note: We’ll confirm via email or phone within 24 hours.</em></p>
+        </div>
+        <div id="quote" class="section">
+            <h2>Get a Quote</h2>
+            <form action="mailto:wes@drivewaymobilemechanics.com" method="post" enctype="text/plain">
+                <label for="q-name">Name</label>
+                <input type="text" id="q-name" name="name" required placeholder="John Doe">
+                <label for="q-phone">Phone</label>
+                <input type="tel" id="q-phone" name="phone" required placeholder="(423) 555-1234">
+                <label for="q-email">Email</label>
+                <input type="email" id="q-email" name="email" required placeholder="you@example.com">
+                <label for="q-issue">Vehicle Issue</label>
+                <textarea id="q-issue" name="issue" rows="3" required placeholder="e.g., Car won’t start"></textarea>
+                <label for="q-location">Location (Tri-Cities, TN area)</label>
+                <input type="text" id="q-location" name="location" required placeholder="e.g., Bristol">
+                <button type="submit">Request Quote</button>
+            </form>
+            <p class="service-hours"><em>Note: We’ll respond with a quote within 24 hours.</em></p>
+        </div>
+        <div id="testimonials" class="section">
+            <h2>Testimonials</h2>
+            <div class="testimonial">
+                <p>"Fixed my brakes at work in no time. Great service!" – Mike, Johnson City</p>
+            </div>
+            <div class="testimonial">
+                <p>"Affordable oil change right at home. Highly recommend!" – Sarah, Kingsport</p>
+            </div>
+            <div class="testimonial">
+                <p>"Quick diagnostics saved my day. Thanks, Wes!" – Tom, Bristol</p>
+            </div>
+        </div>
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>📞 <a href="tel:+14233028474">(423) 302-8474</a><br>
+               ✉️ <a href="mailto:wes@drivewaymobilemechanics.com">wes@drivewaymobilemechanics.com</a><br>
+               <a href="https://www.facebook.com/share/1DFvzKR79P/" target="_blank">Facebook</a></p>
+            <p>Hours: Mon–Fri, 9 AM–5 PM (After-hours surcharge applies)</p>
+            <p>Serving the Tri-Cities, TN area: Johnson City, Kingsport, Bristol, and beyond.</p>
+        </div>
+    </div>
+    <div class="chatbot" id="chatbot">
+        <div class="chat-header" onclick="toggleChat()">Driveway AI Assistant</div>
+        <div class="chat-body" id="chat-body">
+            <div class="bot-message">Thanks for reaching out to Driveway Mobile Mechanics! I’m Wes, your AI assistant. How can I help you today?</div>
+        </div>
+        <input type="text" class="chat-input" id="chat-input" placeholder="Ask about services or car issues..." onkeypress="if(event.key === 'Enter') sendMessage()">
+    </div>
+    <div class="chat-toggle" onclick="toggleChat()">Chat with AI</div>
+    <footer>
+        <p>© 2025 Driveway Mobile Mechanics LLC | <a href="tel:+14233028474">(423) 302-8474</a> | <a href="https://www.facebook.com/share/1DFvzKR79P/">Facebook</a></p>
+    </footer>
+
+    <script>
+        // Chatbot Functionality
+        function toggleChat() {
+            const chatbot = document.getElementById('chatbot');
+            const toggle = document.querySelector('.chat-toggle');
+            chatbot.style.display = chatbot.style.display === 'block' ? 'none' : 'block';
+            toggle.style.display = chatbot.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const chatBody = document.getElementById('chat-body');
+            const message = input.value.trim().toLowerCase();
+            if (!message) return;
+
+            // User message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-message user-message';
+            userMsg.textContent = message;
+            chatBody.appendChild(userMsg);
+
+            // Bot response
+            const botMsg = document.createElement('div');
+            botMsg.className = 'chat-message bot-message';
+            botMsg.textContent = getBotResponse(message);
+            chatBody.appendChild(botMsg);
+
+            input.value = '';
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            // General Queries
+            if (message.includes('book') || message.includes('appointment')) 
+                return 'Thanks for asking! You can schedule an appointment using the "Booking" link above. Want me to walk you through it?';
+            if (message.includes('quote') || message.includes('cost')) 
+                return 'Great question! For a price estimate, fill out the "Get a Quote" form above. I’ll get you an answer fast—any details to share now?';
+            if (message.includes('service') || message.includes('what do you do')) 
+                return 'We’ve got you covered! Our services include Diagnostics ($60+), Brake Repairs ($100+), Oil Changes ($40), Battery Replacements ($80+), and more. Check the Services section for the full list.';
+            if (message.includes('price') || message.includes('pricing')) 
+                return 'Here’s the rundown: Diagnostics start at $60, Brake Repairs at $100, Oil Changes at $40, and Battery Replacements at $80. See the Services section for more details!';
+            if (message.includes('hours') || message.includes('when')) 
+                return 'We’re open Monday to Friday, 9 AM to 5 PM, with after-hours service for an extra fee. When works best for you?';
+            if (message.includes('contact') || message.includes('reach')) 
+                return 'You can reach us at (423) 302-8474 or wes@drivewaymobilemechanics.com. I’m here to help—how can I assist you now?';
+            if (message.includes('location') || message.includes('where')) 
+                return 'We serve the Tri-Cities, TN area—Johnson City, Kingsport, Bristol, and beyond. Where are you located?';
+            if (message.includes('facebook') || message.includes('social')) 
+                return 'Check us out on Facebook at https://www.facebook.com/share/1DFvzKR79P/. Want to connect there?';
+            if (message.includes('after hours') || message.includes('late')) 
+                return 'Need us after 5 PM? We offer after-hours service for an additional fee. Just use the Booking form above to set it up!';
+
+            // Comprehensive Troubleshooting
+            if (message.includes('overheating') || message.includes('car overheating')) 
+                return 'Sorry to hear your car’s overheating! Check your coolant level and avoid driving. Let’s get a Diagnostic ($60+) scheduled—use the Booking form when you’re ready.';
+            if (message.includes('won’t start') || message.includes('car won’t start')) 
+                return 'That’s frustrating! It could be the battery or starter. We can do a Battery Replacement ($80+) or Diagnostic ($60+). Fill out the Quote form to get started.';
+            if (message.includes('brake') && (message.includes('squeak') || message.includes('grind'))) 
+                return 'Squeaky or grinding brakes? That’s a sign they need attention. Schedule a Brake Repair ($100+) with the Booking form—I’ll make sure you’re safe on the road.';
+            if (message.includes('battery') && (message.includes('dead') || message.includes('weak'))) 
+                return 'A dead battery’s no fun! We can replace it for $80+. Use the Booking form to set it up—when’s good for you?';
+            if (message.includes('oil') && (message.includes('leak') || message.includes('low'))) 
+                return 'Got an oil issue? For a leak or low oil, book an Oil Change ($40) or Diagnostic ($60+) using the form above. Let’s fix that quick!';
+            if (message.includes('tire') && (message.includes('flat') || message.includes('low'))) 
+                return 'Flat or low tire? We can handle that on-site. Fill out the Quote form for a fast estimate!';
+            if (message.includes('noise') || message.includes('weird noise')) 
+                return 'Hearing something odd? Let’s figure it out with a Diagnostic ($60+). Use the Booking form—when can you bring it in?';
+            if (message.includes('check engine') || message.includes('light')) 
+                return 'Check engine light on? No worries—we’ll run a Diagnostic ($60+) to find the issue. Book it above when you’re ready!';
+            if (message.includes('steering') && (message.includes('problem') || message.includes('hard'))) 
+                return 'Steering trouble? It might be fluid or a bigger issue. Get a Diagnostic ($60+) via the Quote form—I’ll get you back on track.';
+            if (message.includes('ac') || message.includes('air conditioning') && message.includes('not working')) 
+                return 'AC not cooling? We’ll check it with a Diagnostic ($60+). Use the Booking form to schedule—stay cool!';
+            if (message.includes('transmission') && (message.includes('slip') || message.includes('slipping'))) 
+                return 'Transmission slipping? That could be fluid or wear. Schedule a Diagnostic ($60+) with the Booking form—I’ll sort it out fast.';
+            if (message.includes('exhaust') && (message.includes('smoke') || message.includes('smoking'))) 
+                return 'Exhaust smoke’s a red flag—might be oil or engine trouble. Let’s do a Diagnostic ($60+)—fill out the Quote form now.';
+            if (message.includes('vibration') || message.includes('shaking')) 
+                return 'Feeling a shake? Could be tires or engine. Book a Diagnostic ($60+) using the Booking form—I’ll pinpoint it for you.';
+            if (message.includes('fuel') && (message.includes('smell') || message.includes('leak'))) 
+                return 'Fuel smell or leak? That’s serious—stop driving and use the Quote form for a Diagnostic ($60+). Your safety’s my priority!';
+            if (message.includes('power') && message.includes('loss')) 
+                return 'Losing power? Let’s diagnose it ($60+)—could be fuel or engine. Book it above when you’re ready!';
+            if (message.includes('headlight') && (message.includes('out') || message.includes('dim'))) 
+                return 'Headlight out? We’ll fix that—request a quote for electrical service using the Quote form.';
+            if (message.includes('wipers') && (message.includes('not working') || message.includes('broken'))) 
+                return 'Wipers down? Book a Diagnostic ($60+) or get a quote via the forms above—I’ll get you clear visibility!';
+            if (message.includes('suspension') && (message.includes('bumpy') || message.includes('noise'))) 
+                return 'Bumpy ride? Suspension might need a look. Schedule a Diagnostic ($60+) with the Booking form.';
+            if (message.includes('belt') && (message.includes('squeal') || message.includes('noise'))) 
+                return 'Squealing belt? Let’s check it with a Diagnostic ($60+). Use the Quote form to get started.';
+            if (message.includes('coolant') && (message.includes('leak') || message.includes('low'))) 
+                return 'Coolant trouble? That can overheat your engine. Book a Diagnostic ($60+) using the Booking form now.';
+            if (message.includes('alternator') && (message.includes('fail') || message.includes('charging'))) 
+                return 'Alternator acting up? We’ll test it with a Diagnostic ($60+) or Battery Replacement ($80+). Book it above!';
+            if (message.includes('starter') && message.includes('click')) 
+                return 'Just a click? Starter might be the issue. Get a Diagnostic ($60+) via the Quote form—I’ll fix it fast.';
+            if (message.includes('window') && (message.includes('stuck') || message.includes('not working'))) 
+                return 'Window stuck? We’ll handle it—request a quote for repair using the Quote form.';
+            if (message.includes('exhaust') && message.includes('loud')) 
+                return 'Loud exhaust? Likely a muffler issue. Book a Diagnostic ($60+) with the Booking form.';
+            if (message.includes('alignment') || message.includes('pulling')) 
+                return 'Car pulling? Alignment might be off. Get a quote via the Quote form—I’ll straighten it out!';
+            if (message.includes('overheat') && message.includes('smell')) 
+                return 'Overheating smell? Could be coolant or belts. Schedule a Diagnostic ($60+) using the Booking form.';
+            if (message.includes('clutch') && (message.includes('slip') || message.includes('hard'))) 
+                return 'Clutch trouble? Let’s diagnose it ($60+)—use the Quote form to get started.';
+            if (message.includes('dashboard') && message.includes('warning')) 
+                return 'Dashboard lights on? We’ll run a Diagnostic ($60+) to sort it out. Book it above!';
+            if (message.includes('spark') && (message.includes('misfire') || message.includes('plug'))) 
+                return 'Misfiring? Spark plugs might be the culprit. Schedule a Diagnostic ($60+) with the Booking form.';
+            if (message.includes('radiator') && (message.includes('leak') || message.includes('hot'))) 
+                return 'Radiator leaking or hot? Book a Diagnostic ($60+) using the Booking form—I’ll cool things down.';
+
+            // Niche Issues
+            if (message.includes('hybrid') && (message.includes('battery') || message.includes('not charging'))) 
+                return 'Hybrid battery issue? That’s tricky—let’s run a Diagnostic ($60+) to check it. Use the Booking form to schedule!';
+            if (message.includes('electric') && (message.includes('range') || message.includes('not charging'))) 
+                return 'Electric vehicle losing range or not charging? We’ll diagnose it ($60+). Book it with the Booking form.';
+            if (message.includes('turbo') && (message.includes('noise') || message.includes('fail'))) 
+                return 'Turbo making noise or failing? Get a Diagnostic ($60+) via the Quote form—I’ll boost you back up!';
+            if (message.includes('diesel') && (message.includes('smoke') || message.includes('power'))) 
+                return 'Diesel smoking or low on power? Schedule a Diagnostic ($60+) with the Booking form—I’ve got you covered.';
+            if (message.includes('four wheel drive') || message.includes('4wd') && message.includes('not working')) 
+                return '4WD not engaging? Let’s check it with a Diagnostic ($60+). Use the Quote form to get started.';
+            if (message.includes('abs') && (message.includes('light') || message.includes('brake'))) 
+                return 'ABS light on? That’s your anti-lock brakes—we’ll run a Diagnostic ($60+). Book it above!';
+            if (message.includes('traction') && message.includes('control')) 
+                return 'Traction control issue? Schedule a Diagnostic ($60+) using the Booking form—I’ll keep you steady.';
+            if (message.includes('key') && (message.includes('stuck') || message.includes('not working'))) 
+                return 'Key stuck or not working? We’ll sort it out—request a quote via the Quote form for a quick fix.';
+
+            // Additional Niche Cases & Mixed Scenarios
+            if (message.includes('adaptive') && message.includes('cruise')) 
+                return 'Adaptive cruise control acting up? Let’s run a Diagnostic ($60+) to fix it. Book it with the Booking form!';
+            if (message.includes('lane') && (message.includes('assist') || message.includes('departure'))) 
+                return 'Lane assist or departure warning off? We’ll diagnose it ($60+). Use the Quote form to get started.';
+            if (message.includes('blind spot') && message.includes('monitor')) 
+                return 'Blind spot monitor not working? Schedule a Diagnostic ($60+) with the Booking form—I’ll get it sorted.';
+            if (message.includes('park') && (message.includes('assist') || message.includes('sensor'))) 
+                return 'Parking assist or sensors failing? Let’s check it with a Diagnostic ($60+). Book it above!';
+            if (message.includes('remote') && (message.includes('start') || message.includes('key'))) 
+                return 'Remote start or key fob issues? Request a quote via the Quote form—I’ll get you back in control.';
+            if (message.includes('sunroof') && (message.includes('leak') || message.includes('stuck'))) 
+                return 'Sunroof leaking or stuck? We’ll handle it—use the Quote form for a fast estimate.';
+            if (message.includes('convertible') && message.includes('top')) 
+                return 'Convertible top not moving? Schedule a Diagnostic ($60+) with the Booking form—I’ll fix it quick.';
+            if (message.includes('airbag') && (message.includes('light') || message.includes('warning'))) 
+                return 'Airbag light on? That’s serious—book a Diagnostic ($60+) using the Booking form for safety.';
+            if (message.includes('tpms') || message.includes('tire pressure') && message.includes('light')) 
+                return 'TPMS light on? Let’s check your tire pressure system with a Diagnostic ($60+). Use the Booking form!';
+            if (message.includes('def') || message.includes('diesel exhaust fluid')) 
+                return 'DEF issues with your diesel? Schedule a Diagnostic ($60+) with the Booking form—I’ve got it handled.';
+            if (message.includes('regen') || message.includes('regeneration')) 
+                return 'Diesel regen problems? We’ll diagnose it ($60+). Book it above to keep your engine clean!';
+            if (message.includes('evap') || message.includes('evaporative')) 
+                return 'EVAP system trouble? Could be a gas cap or more—get a Diagnostic ($60+) via the Quote form.';
+            if (message.includes('o2') || message.includes('oxygen sensor')) 
+                return 'Oxygen sensor issue? Let’s run a Diagnostic ($60+)—use the Booking form to schedule.';
+            if (message.includes('mass air') || message.includes('maf')) 
+                return 'Mass airflow sensor acting up? Book a Diagnostic ($60+) with the Booking form—I’ll fix it fast.';
+            if (message.includes('throttle') && (message.includes('body') || message.includes('stuck'))) 
+                return 'Throttle body issues? Schedule a Diagnostic ($60+) using the Quote form—I’ll get you running smooth.';
+            if (message.includes('camshaft') || message.includes('crankshaft')) 
+                return 'Camshaft or crankshaft trouble? That’s engine-deep—book a Diagnostic ($60+) with the Booking form.';
+            if (message.includes('timing') && (message.includes('belt') || message.includes('chain'))) 
+                return 'Timing belt or chain noise? Let’s check it with a Diagnostic ($60+). Use the Quote form now!';
+            if (message.includes('cv') || message.includes('axle')) 
+                return 'CV joint or axle clicking? Schedule a Diagnostic ($60+) with the Booking form—I’ll get you moving.';
+            if (message.includes('transfer case') && message.includes('4wd')) 
+                return 'Transfer case or 4WD issue? Book a Diagnostic ($60+) using the Quote form—I’ll sort it out.';
+            if (message.includes('diff') || message.includes('differential')) 
+                return 'Differential noise or leak? Let’s diagnose it ($60+)—use the Booking form to schedule.';
+            if (message.includes('power steering') && message.includes('leak')) 
+                return 'Power steering leaking? Schedule a Diagnostic ($60+) with the Booking form—I’ll steer you right.';
+            if (message.includes('heater') && message.includes('not working')) 
+                return 'Heater not warming up? Book a Diagnostic ($60+) via the Quote form—stay cozy!';
+            if (message.includes('blower') && message.includes('motor')) 
+                return 'Blower motor dead? We’ll check it with a Diagnostic ($60+). Use the Booking form!';
+            if (message.includes('seat') && (message.includes('heat') || message.includes('cool'))) 
+                return 'Seat heaters or coolers out? Request a quote via the Quote form—I’ll get them working.';
+            if (message.includes('navigation') || message.includes('gps')) 
+                return 'Navigation or GPS down? Schedule a Diagnostic ($60+) with the Booking form—I’ll guide you.';
+            if (message.includes('bluetooth') || message.includes('connect')) 
+                return 'Bluetooth not connecting? Let’s diagnose it ($60+)—use the Quote form to get started.';
+            if (message.includes('usb') && message.includes('not working')) 
+                return 'USB port out? Request a quote via the Quote form—I’ll fix that fast.';
+            if (message.includes('backup') && message.includes('camera')) 
+                return 'Backup camera failing? Book a Diagnostic ($60+) with the Booking form—I’ll clear it up.';
+            if (message.includes('windshield') && message.includes('washer')) 
+                return 'Windshield washer not spraying? Schedule a Diagnostic ($60+) via the Quote form—I’ve got it.';
+            if (message.includes('door') && (message.includes('lock') || message.includes('stuck'))) 
+                return 'Door lock stuck? Request a quote via the Quote form—I’ll get you in and out!';
+            if (message.includes('tailgate') && message.includes('not opening')) 
+                return 'Tailgate won’t open? Book a Diagnostic ($60+) with the Booking form—I’ll handle it.';
+            if (message.includes('hood') && message.includes('latch')) 
+                return 'Hood latch stuck? Request a quote via the Quote form—I’ll pop it open for you.';
+            if (message.includes('trunk') && message.includes('not opening')) 
+                return 'Trunk not opening? Schedule a Diagnostic ($60+) with the Booking form—I’ll fix it fast.';
+            if (message.includes('fuel pump') && (message.includes('noise') || message.includes('fail'))) 
+                return 'Fuel pump noisy or failing? Book a Diagnostic ($60+) via the Quote form—I’ll keep you fueled.';
+            if (message.includes('intake') && message.includes('manifold')) 
+                return 'Intake manifold issue? Let’s diagnose it ($60+)—use the Booking form to schedule.';
+            if (message.includes('egr') || message.includes('exhaust gas')) 
+                return 'EGR valve trouble? Schedule a Diagnostic ($60+) with the Booking form—I’ll clear it up.';
+            if (message.includes('pcv') || message.includes('crankcase')) 
+                return 'PCV valve issue? Book a Diagnostic ($60+) via the Quote form—I’ll get it sorted.';
+            if (message.includes('catalytic') && message.includes('converter')) 
+                return 'Catalytic converter failing? Let’s run a Diagnostic ($60+)—use the Booking form now!';
+            if (message.includes('glow') && message.includes('plug')) 
+                return 'Glow plug issues in your diesel? Schedule a Diagnostic ($60+) with the Booking form—I’ve got it.';
+            if (message.includes('dpf') || message.includes('diesel particulate')) 
+                return 'DPF clogged? Book a Diagnostic ($60+) via the Quote form—I’ll clean it up.';
+            if (message.includes('battery') && message.includes('draining')) 
+                return 'Battery draining fast? Let’s find the drain with a Diagnostic ($60+). Use the Booking form!';
+            if (message.includes('alternator') && message.includes('noise')) 
+                return 'Alternator making noise? Schedule a Diagnostic ($60+) with the Booking form—I’ll check it out.';
+
+            // Mixed Scenarios
+            if (message.includes('overheating') && message.includes('smoke')) 
+                return 'Overheating with smoke? That’s urgent—check coolant and stop driving. Book a Diagnostic ($60+) with the Booking form now!';
+            if (message.includes('won’t start') && message.includes('click')) 
+                return 'Won’t start and just clicking? Likely the starter or battery. Get a Diagnostic ($60+) via the Quote form—I’ll fix it fast.';
+            if (message.includes('brake') && message.includes('vibration')) 
+                return 'Brakes vibrating? Could be rotors—schedule a Brake Repair ($100+) with the Booking form. I’ll smooth it out!';
+            if (message.includes('check engine') && message.includes('misfire')) 
+                return 'Check engine light with a misfire? Let’s run a Diagnostic ($60+)—book it above to pinpoint it.';
+            if (message.includes('steering') && message.includes('noise')) 
+                return 'Steering noisy and hard? Might be power steering—get a Diagnostic ($60+) via the Quote form.';
+            if (message.includes('ac') && message.includes('smell')) 
+                return 'AC not working with a smell? Could be mold or refrigerant—book a Diagnostic ($60+) with the Booking form.';
+            if (message.includes('transmission') && message.includes('noise')) 
+                return 'Transmission slipping with noise? Schedule a Diagnostic ($60+) with the Booking form—I’ll sort it out.';
+            if (message.includes('exhaust') && message.includes('smoke') && message.includes('power')) 
+                return 'Smoke from exhaust and power loss? That’s serious—book a Diagnostic ($60+) via the Quote form now.';
+            if (message.includes('battery') && message.includes('light') && message.includes('alternator')) 
+                return 'Battery light with alternator issues? Let’s test it with a Diagnostic ($60+). Book it above!';
+            if (message.includes('hybrid') && message.includes('noise') && message.includes('battery')) 
+                return 'Hybrid battery with noise? That’s complex—schedule a Diagnostic ($60+) with the Booking form.';
+            if (message.includes('electric') && message.includes('charge') && message.includes('slow')) 
+                return 'Electric car charging slow? Book a Diagnostic ($60+) via the Quote form—I’ll speed it up.';
+            if (message.includes('diesel') && message.includes('smoke') && message.includes('regen')) 
+                return 'Diesel smoking with regen issues? Schedule a Diagnostic ($60+) with the Booking form—I’ll fix it.';
+            if (message.includes('4wd') && message.includes('vibration')) 
+                return '4WD not working with vibration? Get a Diagnostic ($60+) via the Quote form—I’ll get you rolling.';
+            if (message.includes('abs') && message.includes('traction')) 
+                return 'ABS and traction lights on? Book a Diagnostic ($60+) with the Booking form—I’ll stabilize it.';
+            if (message.includes('overheating') && message.includes('ac') && message.includes('not working')) 
+                return 'Overheating and AC out? Could be related—schedule a Diagnostic ($60+) with the Booking form now.';
+
+            return 'Thanks for reaching out! You’re in good hands—tell me about your car issue or service question, and I’ll get you answers fast!';
+        }
+    </script>
+</body>
+</html>
